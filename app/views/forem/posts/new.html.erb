@@ -11,5 +11,6 @@
 
 <%= simple_form_for [forem, @topic.forum, @topic, @post] do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
+  <div id="hey_input">---NEED TO ADD DICE ROLL AND GAMEPLAY INPUT FUNCTION HERE---</div>
   <%= f.submit t("forem.post.buttons.reply"), :class => "btn btn-primary" %>
 <% end %>
