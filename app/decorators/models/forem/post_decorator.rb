@@ -1,5 +1,5 @@
 Forem::Post.class_eval do
-  def poop
-  	"poop!"
-  end
+  # def poop
+  # 	"poop!"
+  # end
 end
