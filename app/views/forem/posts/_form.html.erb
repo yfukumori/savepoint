@@ -1,4 +1,7 @@
-<%= f.input :text, :input_html => { :class => "field col-md-12" } %>
+<%= f.input :text, :input_html => { :class => "field col-md-12" } %><br>
+<div class="roll_box">Number of Dice <%= f.input :no_of_die, :collection => %w[1 2 3 4] %></div>
+<div class="roll_box">Number of Sides <%= f.input :no_of_side, :collection => %w[4 6 8 10 12 20] %></div>
+<div class="roll_box">Modifier <%= f.input :roll_mod, :collection => %w[Strength Dexterity Constitution Intelligence Wisdom Charisma] %></div>
 
 <% if params[:reply_to_id] %>
   <%= f.hidden_field :reply_to_id, :value => params[:reply_to_id] %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140723191924) do
+ActiveRecord::Schema.define(version: 20140725172354) do
 
   create_table "forem_categories", force: true do |t|
     t.string   "name",       null: false
@@ -61,6 +61,9 @@ ActiveRecord::Schema.define(version: 20140723191924) do
     t.integer  "reply_to_id"
     t.string   "state",       default: "pending_review"
     t.boolean  "notified",    default: false
+    t.integer  "no_of_die"
+    t.integer  "no_of_side"
+    t.string   "roll_mod"
   end
 
   add_index "forem_posts", ["reply_to_id"], name: "index_forem_posts_on_reply_to_id"
