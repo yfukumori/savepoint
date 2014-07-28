@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  topic_id: 1
+  character_name: MyString
+  str: 1
+  dex: 1
+  con: 1
+  wis: 1
+  int: 1
+  cha: 1
+  character_race: MyString
+  character_class: MyString
+  character_alignment: MyString
+  armor_bonus: 1
+  shield_bonus: 1
+  fort_save: 1
+  ref_save: 1
+  will_save: 1
+  base_attack_bonus: 1
+  nat_armor: 1
+  character_size: 1
+
+two:
+  user_id: 1
+  topic_id: 1
+  character_name: MyString
+  str: 1
+  dex: 1
+  con: 1
+  wis: 1
+  int: 1
+  cha: 1
+  character_race: MyString
+  character_class: MyString
+  character_alignment: MyString
+  armor_bonus: 1
+  shield_bonus: 1
+  fort_save: 1
+  ref_save: 1
+  will_save: 1
+  base_attack_bonus: 1
+  nat_armor: 1
+  character_size: 1

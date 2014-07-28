@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140725172354) do
+ActiveRecord::Schema.define(version: 20140728201601) do
 
   create_table "forem_categories", force: true do |t|
     t.string   "name",       null: false
@@ -110,6 +110,31 @@ ActiveRecord::Schema.define(version: 20140725172354) do
   add_index "forem_views", ["updated_at"], name: "index_forem_views_on_updated_at"
   add_index "forem_views", ["user_id"], name: "index_forem_views_on_user_id"
   add_index "forem_views", ["viewable_id"], name: "index_forem_views_on_viewable_id"
+
+  create_table "sheets", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "topic_id"
+    t.string   "character_name"
+    t.integer  "str"
+    t.integer  "dex"
+    t.integer  "con"
+    t.integer  "wis"
+    t.integer  "int"
+    t.integer  "cha"
+    t.string   "character_race"
+    t.string   "character_class"
+    t.string   "character_alignment"
+    t.integer  "armor_bonus"
+    t.integer  "shield_bonus"
+    t.integer  "fort_save"
+    t.integer  "ref_save"
+    t.integer  "will_save"
+    t.integer  "base_attack_bonus"
+    t.integer  "character_size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "nat_armor",           default: 0
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",               null: false

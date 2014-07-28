@@ -1,0 +1,73 @@
+<h1>New Character!</h1>
+<%= form_for @sheet do |f|%>
+	<p> <!-- Character Name -->
+		<%= f.label "Character Name" %>
+		<%= f.text_field "character_name" %>
+		<!-- Character Race -->
+    	<%= f.label "Race" %>
+    	<%= f.text_field "character_race" %>
+  		<!-- Character Class -->
+    	<%= f.label "Class" %>
+    	<%= f.text_field "character_class" %>
+  		<!-- Alignment -->
+    	<%= f.label "Alignment" %>
+    	<%= f.select :character_alignment, options_for_select([['Lawful Good', 'LG'], ['Neutral Good', 'NG'], ['Chaotic Good', 'CG'], ['Lawful Neutral', 'LN'], ['True Neutral', 'N'], ['Chaotic Neutral', 'CN'], ['Lawful Evil', 'LE'], ['Neutral Evil', 'NE'], ['Chaotic Evil', 'CE']]) %>
+    	<!-- Size -->
+    	<%= f.label "Size" %>
+    	<%= f.select :character_size, options_for_select([['Large', 1], ['Medium', 0], ['Small', -1]]) %>
+  	</p>
+	<p> <!-- Strength -->
+		<%= f.label "STR" %>
+		<%= f.text_field "str" %>
+	</p>
+	<p> <!-- Dexterity -->
+		<%= f.label "DEX" %>
+		<%= f.text_field "dex" %>
+	</p>
+	<p> <!-- Constitution -->
+		<%= f.label "CON" %>
+		<%= f.text_field "con" %>
+	</p>
+	<p> <!-- Wisdom -->
+		<%= f.label "WIS" %>
+		<%= f.text_field "wis" %>
+	</p>
+	<p> <!-- Intelegence -->
+		<%= f.label "INT" %>
+		<%= f.text_field "int" %>
+	</p>
+	<p> <!-- Chrisma -->
+		<%= f.label "CHA" %>
+		<%= f.text_field "cha" %>
+	</p>
+	<p> <!-- Armor Bonus -->
+		<%= f.label "Armor Bonus" %>
+		<%= f.text_field "armor_bonus" %>
+		<!-- Sheild Bonus -->
+		<%= f.label "Shield Bonus" %>
+		<%= f.text_field "shield_bonus" %>
+		<!-- Natural Armor -->
+		<%= f.label "Natural Armor" %>
+		<%= f.text_field "nat_armor" %>
+	</p>
+	<p> <!-- Fortitude -->
+		<%= f.label "Fortitude Base Save" %>
+		<%= f.text_field "fort_save" %>
+	</p>
+	<p> <!-- Reflex -->
+		<%= f.label "Reflex Base Save" %>
+		<%= f.text_field "ref_save" %>
+	</p>
+	<p> <!-- Will -->
+		<%= f.label "Will Base Save" %>
+		<%= f.text_field "will_save" %>
+	</p>
+	<p> <!-- Base Attack -->
+		<%= f.label "Base Attack Bonus" %>
+		<%= f.text_field "base_attack_bonus" %>
+	</p>
+	<p>
+		<%= f.submit "Save" %>
+	</p>
+
+<% end %>
