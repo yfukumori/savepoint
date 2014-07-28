@@ -2,6 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#hey_input, #hey_output {
-	background-color: tomato;
+.hey_output {
+	display: inline-block;
 }

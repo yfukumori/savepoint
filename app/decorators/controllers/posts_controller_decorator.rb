@@ -41,7 +41,7 @@ Forem::PostsController.class_eval do
 private
 
         def post_params
-      params.require(:post).permit(:text, :reply_to_id)
+      params.require(:post).permit(:text, :reply_to_id, :no_of_die, :no_of_side, :roll_mod)
     end
 
         def authorize_reply_for_topic!
