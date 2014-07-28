@@ -5,7 +5,8 @@ Forem.default_gravatar = 'mm'
 Forem.per_page = 5
 
 Rails.application.config.to_prepare do
-	Forem.layout = "application"
+Forem::ApplicationController.layout "application"
+Forem::Admin::BaseController.layout "application"
 end
 
 
