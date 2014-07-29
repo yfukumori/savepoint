@@ -1,5 +1,6 @@
-<%= link_to "Edit", edit_sheet_path(@sheets[:id]) %> | <%= link_to "Delete", @sheet, :confirm => "Are you sure you want to delete this character?", :method => :delete %>
-<p>Character name: <%= @sheets.character_name %> Race: <%= @sheets.character_race %> Class: <%= @sheets.character_class %> Alignment: <%= @sheets.character_alignment %> Size: <%= @sheets.size_word %></p>
+<%= link_to "My Characters", "/sheets" %> | <%= link_to "Edit", edit_sheet_path(@sheets[:id]) %> | <%= link_to "Delete", @sheet, :confirm => "Are you sure you want to delete this character?", :method => :delete %>
+<h1><%= @sheets.character_name %></h1>
+<p>Race: <%= @sheets.character_race %> Class: <%= @sheets.character_class %> Alignment: <%= @sheets.character_alignment %> Size: <%= @sheets.size_word %></p>
 
 <!-- Base Abilities -->
 <p>Strength: <%= @sheets.str %> Str mod: <%= @sheets.str_mod %> </p>
