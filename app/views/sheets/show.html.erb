@@ -1,2 +1,26 @@
-<h1>Sheets#show</h1>
-<p>Find me in app/views/sheets/show.html.erb</p>
+<%= link_to "My Characters", "/sheets" %> | <%= link_to "Edit", edit_sheet_path(@sheets[:id]) %> | <%= link_to "Delete", @sheet, :confirm => "Are you sure you want to delete this character?", :method => :delete %>
+<h1><%= @sheets.character_name %></h1>
+<p>Race: <%= @sheets.character_race %> Class: <%= @sheets.character_class %> Alignment: <%= @sheets.character_alignment %> Size: <%= @sheets.size_word %></p>
+
+<!-- Base Abilities -->
+<p>Strength: <%= @sheets.str %> Str mod: <%= @sheets.str_mod %> </p>
+<p>Dexterity: <%= @sheets.dex %> Dex mod: <%= @sheets.dex_mod %> </p>
+<p>Constitution: <%= @sheets.con %> Con mod: <%= @sheets.con_mod %> </p>
+<p>Wisdom: <%= @sheets.wis %> Wis mod: <%= @sheets.wis_mod %> </p>
+<p>Intelegence: <%= @sheets.int %> Int mod: <%= @sheets.int_mod %> </p>
+<p>Chrisma: <%= @sheets.cha %> Cha mod: <%= @sheets.cha_mod %> </p>
+
+<!-- AC -->
+<p>Armor Class: <%= @sheets.armor_class %> = Armor: <%= @sheets.armor_bonus %> + Shield: <%= @sheets.shield_bonus %> + Dex mod: <%= @sheets.dex_mod %> + 10 </p>
+<p>Touch AC: <%= @sheets.shield_bonus + @sheets.dex_mod + 10 %></p>
+<p>Flat-Footed: <%= @sheets.armor_bonus + @sheets.shield_bonus + 10 %></p>
+
+<!-- Saving Throws -->
+<p>Fortitude Save: <%= @sheets.fort %> = Base: <%= @sheets.fort_save %> + Con Mod: <%= @sheets.con_mod %>
+<p>Reflex Save: <%= @sheets.ref %> = Base: <%= @sheets.ref_save %> + Dex Mod: <%= @sheets.dex_mod %>
+<p>Will Save: <%= @sheets.will %> = Base: <%= @sheets.will_save %> + Wis Mod: <%= @sheets.wis_mod %>
+
+<!-- Attack! -->
+<p>Base Attack Bonus: <%= @sheets.base_attack_bonus %></p>
+<p>CMB: <%= @sheets.cmb %> = base_attack_bonus: <%= @sheets.base_attack_bonus %> + Str mod: <%= @sheets.str_mod %> </p>
+<p>CMD: <%= @sheets.cmd %> = base_attack_bonus: <%= @sheets.base_attack_bonus %> + Str mod: <%= @sheets.str_mod %> + Dex mod: <%= @sheets.dex_mod %> + 10 </p>

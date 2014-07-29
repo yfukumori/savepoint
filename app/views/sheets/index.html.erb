@@ -1,0 +1,6 @@
+<h1>Character Sheets!</h1>
+<%= link_to "New Character", "/sheets/new" %>
+
+<% @sheets.each do |sheet| %>
+	<p> Character: <%= link_to sheet.character_name, "/sheets/#{sheet.id}" %>
+<% end %>

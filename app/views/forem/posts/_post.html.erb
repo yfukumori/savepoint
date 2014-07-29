@@ -32,8 +32,14 @@
         <a href='#post-<%= post.id %>'>
           <%= post_time_tag(post) %>
         </a>
+        <!-- where dice roll is displayed -->
         <%= forem_format(post.text) %>
         <div style="display:inline-block;"> Rolled </div><div style="display:inline-block;"><%= forem_format(post.no_of_die.to_s) %></div><div style="display:inline-block;"> </div> <div style="display:inline-block;"><%= forem_format(post.no_of_side.to_s) %></div><div style="display:inline-block;">*DICE* and applied the </div><div style="display:inline-block;"><%= forem_format(post.roll_mod.to_s) %></div>
+
+        <!-- how to get user id -->
+        <!-- <p> My user id is <%= forem_user.id %> </p> -->
+        <!-- finding topic id -->
+        <p> The topic id is <%= post.topic.id %> </p>
 
         <% if post.reply_to %>
           <div class='in-reply-to'>

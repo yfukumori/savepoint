@@ -24,6 +24,8 @@ resources :sheets
 
   devise_for :users
 
+  resources :sheets
+
   root to: 'pages#home'
   
   # The priority is based upon order of creation: first created -> highest priority.
