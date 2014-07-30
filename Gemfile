@@ -7,6 +7,8 @@ gem 'rails', '4.1.2'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -35,6 +37,8 @@ gem 'forem-redcarpet', github: "radar/forem-redcarpet"
 gem 'devise'
 
 gem 'will_paginate'
+
+gem 'quiet_assets', group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
