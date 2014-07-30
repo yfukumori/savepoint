@@ -3,10 +3,18 @@ class SheetsController < ApplicationController
 
   def new
       @sheet = @topic.sheets.build
+
+      # Attempted 
+      # @sheet.user_id = :user_id
+      # @sheet.forum_id = :forum_id
+      # @sheet.topic_id = :topic_id
   end
 
   def create
-      @sheet = @topic.sheets.build(sheet_params)
+      # @topic = Forem::Topic.find(params(:topic_id))
+      # @sheet = @topic.sheets.build(sheet_params)
+
+      @sheet = Sheet.new(sheet_params)
       @sheet.user = forem_user
 
       if @sheet.save
@@ -31,7 +39,7 @@ class SheetsController < ApplicationController
       private
 
     def sheet_params
-      params.require(:sheet).permit(:character_name, :str, :dex, :con, :wis, :int, :cha, :character_race, :character_class, :character_alignment, :armor_bonus, :shield_bonus, :fort_save, :ref_save, :will_save, :base_attack_bonus, :character_size, :nat_armor)
+      params.require(:sheet).permit( :topic_id,:character_name, :str, :dex, :con, :wis, :int, :cha, :character_race, :character_class, :character_alignment, :armor_bonus, :shield_bonus, :fort_save, :ref_save, :will_save, :base_attack_bonus, :character_size, :nat_armor)
     end
 
     def find_topic
