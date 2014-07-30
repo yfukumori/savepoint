@@ -15,5 +15,4 @@
 //= require forem
 //= require turbolinks
 //= require_tree .
-require forem
 
