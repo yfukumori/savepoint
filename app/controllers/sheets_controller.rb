@@ -3,11 +3,7 @@ class SheetsController < ApplicationController
 
   def new
       @sheet = @topic.sheets.build
-
-      # Attempted 
-      # @sheet.user_id = :user_id
-      # @sheet.forum_id = :forum_id
-      # @sheet.topic_id = :topic_id
+      @sheet.forum_id = @topic.forum.id
   end
 
   def create
@@ -39,11 +35,22 @@ class SheetsController < ApplicationController
       private
 
     def sheet_params
-      params.require(:sheet).permit( :topic_id,:character_name, :str, :dex, :con, :wis, :int, :cha, :character_race, :character_class, :character_alignment, :armor_bonus, :shield_bonus, :fort_save, :ref_save, :will_save, :base_attack_bonus, :character_size, :nat_armor)
+      params.require(:sheet).permit(:forum_id, :topic_id, :character_name, :str, :dex, :con, :wis, :int, :cha, :character_race, :character_class, :character_alignment, :armor_bonus, :shield_bonus, :fort_save, :ref_save, :will_save, :base_attack_bonus, :character_size, :nat_armor)
     end
 
     def find_topic
       # @topic = Topic.friendly.find params[:topic_id]
       @topic = Forem::Topic.find(params[:topic_id])
+    end
+
+    def create_successful
+      flash[:notice] = "Your character sheet has been successfully saved."
+      redirect_to forem.forum_topic_url(:action => "show", :contorller => "forem/topics", :format => nil, :forum_id => @sheet.forum_id, :id => @sheet.topic_id)
+    end
+
+    def create_failed
+      params[:reply_to_id] = params[:post][:reply_to_id]
+      flash.now.alert = "Your character sheet has not been successfully saved.  Please re-submit."
+      render :action => "new"
     end
 end

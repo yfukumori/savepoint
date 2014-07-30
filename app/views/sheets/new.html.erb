@@ -2,6 +2,7 @@
 
 <h1>New Character!</h1>
 <%= form_for @sheet do |f|%>
+	<%= f.hidden_field :forum_id %>
 	<%= f.hidden_field :topic_id %>
 	<p> <!-- Character Name -->
 		<%= f.label "Character Name" %>
