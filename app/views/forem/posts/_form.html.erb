@@ -1,7 +1,7 @@
 <%= f.input :text, :input_html => { :class => "field col-md-12" } %><br>
-<div class="roll_box">Number of Dice <%= f.input :no_of_die, :collection => %w[1 2 3 4] %></div>
-<div class="roll_box">Number of Sides <%= f.input :no_of_side, :collection => %w[4 6 8 10 12 20] %></div>
-<div class="roll_box">Modifier <%= f.input :roll_mod, :collection => %w[Strength Dexterity Constitution Intelligence Wisdom Charisma] %></div>
+<div class="roll_box">Number of Dice <%= f.text_field "no_of_die" %></div>
+<div class="roll_box">Number of Sides <%= f.text_field "no_of_side" %></div>
+<div class="roll_box">Modifier <%= f.select :roll_mod, options_for_select([["Strength Mod", "str_mod"], ["Dexterity Mod", "dex_mod"],["Constitution Mod", "con_mod"], ["Wisdom Mod", "wis_mod"], ["Intelegence Mod", "int_mod"], ["Chrisma Mod", "cha_mod"], ["Attack mod", "attack"], ["Fortitude Save", "fort_save"], ["Will Save", "will_save"], ["Reflex Save", "ref_save"], ["Combat Maneuver Bonus", "cmb"]]) %></div>
 
 <% if params[:reply_to_id] %>
   <%= f.hidden_field :reply_to_id, :value => params[:reply_to_id] %>
