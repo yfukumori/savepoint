@@ -48,3 +48,10 @@ gem 'will_paginate'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+	gem 'binding_of_caller'
+	gem 'better_errors'
+	gem 'pry-rails'
+	gem 'pry-byebug'
+	gem 'quiet_assets'
+end

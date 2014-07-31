@@ -1,4 +1,8 @@
 class Sheet < ActiveRecord::Base
+
+include ActiveModel::Conversion
+extend  ActiveModel::Naming
+
     belongs_to :user
 	belongs_to :topic
 

@@ -21,9 +21,12 @@ class SheetsController < ApplicationController
   end
 
   def update
+
+        update_successful
   end
 
   def edit
+    @sheet = Sheet.where(topic_id: params[:topic_id], user_id: forem_user.id).first
   end
 
   def destroy
@@ -52,5 +55,14 @@ class SheetsController < ApplicationController
       params[:reply_to_id] = params[:post][:reply_to_id]
       flash.now.alert = "Your character sheet has not been successfully saved.  Please re-submit."
       render :action => "new"
+    end
+
+        def update_successful
+      redirect_to forem.forum_topic_url(:action => "show", :contorller => "forem/topics", :format => nil, :forum_id => @sheet.forum_id, :id => @sheet.topic_id)
+    end
+
+    def update_failed
+      flash.now.alert = t("forem.post.not_edited")
+      render :action => "edit"
     end
 end

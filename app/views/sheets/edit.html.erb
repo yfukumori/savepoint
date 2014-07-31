@@ -1,2 +1,6 @@
-<h1>Sheets#edit</h1>
-<p>Find me in app/views/sheets/edit.html.erb</p>
+<h2>Edit Your Character Sheet</h2>
+
+<%= form_for @sheet do |f|%>
+  <%= render :partial => "form", :locals => { :f => f } %>
+  <%= f.submit t("forem.post.buttons.edit"), :class => "btn btn-primary" %>
+<% end %>
