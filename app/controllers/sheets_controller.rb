@@ -20,13 +20,15 @@ class SheetsController < ApplicationController
       end
   end
 
-  def update
-
-        update_successful
-  end
-
   def edit
     @sheet = Sheet.where(topic_id: params[:topic_id], user_id: forem_user.id).first
+    @sheet.forum_id = params[:forum_id]
+  end
+
+    def update
+      @sheet = Sheet.where(topic_id: params[:sheet][:topic_id], user_id: forem_user.id).first
+      @sheet.update_attributes(sheet_params)
+        redirect_to forem.forum_topic_url(:action => "show", :contorller => "forem/topics", :format => nil, :forum_id => @sheet.forum_id, :id => @sheet.topic_id)
   end
 
   def destroy

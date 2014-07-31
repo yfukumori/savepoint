@@ -2,5 +2,8 @@
 
 <%= form_for @sheet do |f|%>
   <%= render :partial => "form", :locals => { :f => f } %>
-  <%= f.submit t("forem.post.buttons.edit"), :class => "btn btn-primary" %>
+	<p>
+		<%= f.submit "Save" %>
+	</p>
+
 <% end %>
