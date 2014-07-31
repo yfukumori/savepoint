@@ -40,10 +40,39 @@ Forem::PostsController.class_eval do
 
 private
     def roll_die
+      #reolling the dice
       total = 0
       @post.no_of_die.times do
         total += rand(@post.no_of_side)
       end
+      #getting the correct sheet
+      sheet = Sheet.where(:topic_id => @post.topic_id, :user_id => @post.user_id).first
+      # adding the modifiers
+      case :roll_mod
+      when "str_mod"
+        total += sheet.str_mod
+      when "dex_mod"
+        total += sheet.dex_mod
+      when "con_mod"
+        total += sheet.con_mod
+      when "int_mod"
+        total += sheet.int_mod
+      when "wis_mod"
+        total += sheet.wis_mod
+      when "cha_mod"
+        total += sheet.cha_mod
+      when "attack"
+        total += sheet.attack_mod
+      when "fort_save"
+        total += sheet.fort_save
+      when "will_save"
+        total += sheet.will_save
+      when "ref_save"
+        total += sheet.ref_save
+      when "cmb"
+        total += sheet.cmb
+      end
+      
       return total
     end
 

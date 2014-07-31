@@ -67,4 +67,8 @@ class Sheet < ActiveRecord::Base
 			"Small"
 		end
 	end
+
+	def attack_mod
+		base_attack_bonus + str_mod
+	end
 end
