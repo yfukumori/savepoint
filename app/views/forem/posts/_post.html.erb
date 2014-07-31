@@ -36,6 +36,8 @@
         <%= forem_format(post.text) %>
         <div style="display:inline-block;"> Rolled </div><div style="display:inline-block;"><%= forem_format(post.no_of_die.to_s) %></div><div style="display:inline-block;"> </div> <div style="display:inline-block;"><%= forem_format(post.no_of_side.to_s) %></div><div style="display:inline-block;">*DICE* and applied the </div><div style="display:inline-block;"><%= forem_format(post.roll_mod.to_s) %></div>
 
+        <p> Rolled: <%= forem_format(post.no_of_die.to_s) %>d<%= forem_format(post.no_of_side.to_s) %> + <%= forem_format(post.roll_mod.to_s) %> = <%= forem_format(post.result.to_s) %></p>
+
         <!-- how to get user id -->
         <!-- <p> My user id is <%= forem_user.id %> </p> -->
         <!-- finding topic id -->
