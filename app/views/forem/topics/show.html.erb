@@ -25,7 +25,11 @@
         <%= link_to t(".pin.#{@topic.pinned}"), forem.toggle_pin_admin_forum_topic_path(@forum, @topic), :method => :put, :class => "btn" %>
     <% end %>
     </div>
-    <%= link_to "Create a Character Sheet", main_app.new_sheet_path(:topic_id => @topic.id, :forum_id => @topic.forum.id), :class => "btn" %>
+    <% if Sheet.where(topic_id: @topic.id, user_id: forem_user) %>
+        <%= link_to "Edit a Character Sheet", main_app.edit_sheet_path(:topic_id => @topic.id, :forum_id => @topic.forum.id), :class => "btn" %>
+    <% else %>
+       <%= link_to "Create a Character Sheet", main_app.new_sheet_path(:topic_id => @topic.id, :forum_id => @topic.forum.id), :class => "btn" %>
+    <% end %>
     
     
   </div>
