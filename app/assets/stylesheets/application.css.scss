@@ -13,4 +13,37 @@
  *= require_tree .
  *= require_self
  */
- @import 'forem/base';
+
+@import 'forem/base';
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+body {
+	padding-top: 40px;
+	padding-left: 0px;
+}
+
+.navbar-brand {
+	font-family: Fantasy;
+
+}
+
+.poop {
+	width: 250px;
+}
+
+.poop1 {
+	width: 220px;
+}
+
+.poop2 {
+	width: 240px;
+}
+
+.poop3 {
+	width: 260px;
+}
+
+.poop4 {
+	width: 300px;
+}

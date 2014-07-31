@@ -60,6 +60,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (2.2.0.20140727)
+      execjs
     bcrypt (3.1.7)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -211,8 +213,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+
   better_errors
   binding_of_caller
+
+  autoprefixer-rails
+  bootstrap-sass
+
   coffee-rails (~> 4.0.0)
   devise
   forem!
@@ -220,8 +227,10 @@ DEPENDENCIES
   forem-redcarpet!
   jbuilder (~> 2.0)
   jquery-rails
+
   pry-byebug
   pry-rails
+
   quiet_assets
   rails (= 4.1.2)
   sass-rails (~> 4.0.3)
