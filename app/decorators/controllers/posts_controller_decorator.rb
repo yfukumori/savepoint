@@ -14,7 +14,7 @@ Forem::PostsController.class_eval do
     def create
       @post = @topic.posts.build(post_params)
       @post.user = forem_user
-
+      @post.result = roll_die
       if @post.save
         create_successful
       else
@@ -39,16 +39,23 @@ Forem::PostsController.class_eval do
     end
 
 private
+    def roll_die
+      total = 0
+      @post.no_of_die.times do
+        total += rand(@post.no_of_side)
+      end
+      return total
+    end
 
-        def post_params
+    def post_params
       params.require(:post).permit(:text, :reply_to_id, :no_of_die, :no_of_side, :roll_mod)
     end
 
-        def authorize_reply_for_topic!
+    def authorize_reply_for_topic!
       authorize! :reply, @topic
     end
 
-        def authorize_edit_post_for_forum!
+    def authorize_edit_post_for_forum!
       authorize! :edit_post, @topic.forum
     end
 
