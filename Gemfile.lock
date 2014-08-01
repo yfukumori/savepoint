@@ -120,6 +120,7 @@ GEM
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     polyglot (0.3.5)
     posix-spawn (0.3.8)
     pry (0.10.0)
@@ -213,13 +214,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-
+  autoprefixer-rails
   better_errors
   binding_of_caller
-
-  autoprefixer-rails
   bootstrap-sass
-
   coffee-rails (~> 4.0.0)
   devise
   forem!
@@ -227,10 +225,9 @@ DEPENDENCIES
   forem-redcarpet!
   jbuilder (~> 2.0)
   jquery-rails
-
+  pg
   pry-byebug
   pry-rails
-
   quiet_assets
   rails (= 4.1.2)
   sass-rails (~> 4.0.3)
