@@ -38,6 +38,8 @@ gem 'devise'
 
 gem 'will_paginate'
 
+gem 'pg'
+
 gem 'quiet_assets', group: :development
 
 # Use ActiveModel has_secure_password
