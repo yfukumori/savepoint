@@ -213,13 +213,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-
+  autoprefixer-rails
   better_errors
   binding_of_caller
-
-  autoprefixer-rails
   bootstrap-sass
-
   coffee-rails (~> 4.0.0)
   devise
   forem!
@@ -227,10 +224,8 @@ DEPENDENCIES
   forem-redcarpet!
   jbuilder (~> 2.0)
   jquery-rails
-
   pry-byebug
   pry-rails
-
   quiet_assets
   rails (= 4.1.2)
   sass-rails (~> 4.0.3)
