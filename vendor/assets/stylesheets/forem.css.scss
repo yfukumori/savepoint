@@ -44,3 +44,31 @@ h1, h2, h3, h4, h5, h6 {
 .poop4 {
 	width: 230px;
 }
+
+.roll_result {
+	text-align: right;
+	vertical-align: bottom;
+}
+
+.roll_table {
+	width: 24%;
+	float: right;
+}
+
+td {
+	vertical-align: top;
+}
+
+table, th, td {
+   border: 1px solid rgba(255,255,255,0.15);
+}
+
+.btn-group {
+
+margin-left: 17.5%;
+width: 100%;
+}
+
+#pls_work {
+margin-left: 0%;	
+}
