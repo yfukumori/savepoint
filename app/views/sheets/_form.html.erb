@@ -18,27 +18,27 @@
   	</p>
 	<p> <!-- Strength -->
 		<%= f.label "STR" %>
-		<%= f.text_field "str" %>
+		<%= f.select :str, ((3..18).to_a) %>
 	</p>
 	<p> <!-- Dexterity -->
 		<%= f.label "DEX" %>
-		<%= f.text_field "dex" %>
+		<%= f.select :dex, ((3..18).to_a) %>
 	</p>
 	<p> <!-- Constitution -->
 		<%= f.label "CON" %>
-		<%= f.text_field "con" %>
+		<%= f.select :con, ((3..18).to_a) %>
 	</p>
 	<p> <!-- Wisdom -->
 		<%= f.label "WIS" %>
-		<%= f.text_field "wis" %>
+		<%= f.select :wis, ((3..18).to_a) %>
 	</p>
 	<p> <!-- Intelegence -->
 		<%= f.label "INT" %>
-		<%= f.text_field "int" %>
+		<%= f.select :int, ((3..18).to_a) %>
 	</p>
 	<p> <!-- Chrisma -->
 		<%= f.label "CHA" %>
-		<%= f.text_field "cha" %>
+		<%= f.select :cha, ((3..18).to_a) %>
 	</p>
 	<p> <!-- Armor Bonus -->
 		<%= f.label "Armor Bonus" %>
