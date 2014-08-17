@@ -27,7 +27,7 @@ class SheetsController < ApplicationController
     @sheet.forum_id = params[:forum_id]
   end
 
-    def update
+  def update
       #Allows for params embedded in the URL to be used to trace the sheet matching the oriignating topic and user.
       @sheet = Sheet.where(topic_id: params[:sheet][:topic_id], user_id: forem_user.id).first
       @sheet.update_attributes(sheet_params)
