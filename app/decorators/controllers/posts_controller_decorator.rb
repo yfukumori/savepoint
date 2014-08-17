@@ -1,4 +1,6 @@
 Forem::PostsController.class_eval do
+  #In order to add references to dice rolls, modifiers and roll results, the entire post controller was replicated and modified within this decorator.
+  #Except where noted, all methods should be identical to those within the original engine.
     def new
       @post = @topic.posts.build
       find_reply_to_post
@@ -14,6 +16,7 @@ Forem::PostsController.class_eval do
     def create
       @post = @topic.posts.build(post_params)
       @post.user = forem_user
+      #Tabulates the randomized dice results from the player's turn and prevents a re-roll upon reloading or editing the post. 
       @post.result = roll_die
       if @post.save
         create_successful
@@ -77,6 +80,7 @@ private
     end
 
     def post_params
+      #no_of_die, no_of_side and roll_mod not original to Forem engine
       params.require(:post).permit(:text, :reply_to_id, :no_of_die, :no_of_side, :roll_mod)
     end
 
