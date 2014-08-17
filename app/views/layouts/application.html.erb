@@ -41,7 +41,7 @@
 
               <li class="active"><%= link_to 'Home', main_app.root_path %></li>
 
-              <li><%= link_to 'Forums', forem.forums_path %></li>
+              <li><%= link_to 'Games', forem.forums_path %></li>
               <% if user_signed_in? %>
               <li><%= link_to current_user.email, main_app.edit_user_registration_path %></li>
               <li><%= link_to "Sign out", main_app.destroy_user_session_path, :method => :delete %></li>
