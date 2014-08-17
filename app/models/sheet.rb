@@ -5,7 +5,7 @@ extend  ActiveModel::Naming
 
     belongs_to :user
 	belongs_to :topic
-
+#Moerthods allow for the interpretation of roll modifier for inclusion in the roll_die method within post_controller_decorator.
 	def str_mod
 		(str-10)/2
 	end

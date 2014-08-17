@@ -8,10 +8,12 @@ class User < ActiveRecord::Base
   
 
   def forem_name
+    #screen_name needs to be re-introduced, removed during the formatting of the user registration page.
   	screen_name
   end
 
   def forem_email
+    #Needs to be reworked.  forem_email changed to resolve one problem, broke the Gravitar integration.
   	email
   end       
 end
