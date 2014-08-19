@@ -25,7 +25,8 @@
             <%= link_to_if Forem.user_profile_links, post.user.forem_name, [main_app, post.user] %>
           <% end %>
         </div><!-- for username -->
-        <div class='icon'><%= forem_avatar(post.user, :size => 60) %></div>
+        <!-- Gravitar function not working within engine, overridden with gravatar_image_tag gem. -->
+        <div class='icon'><%= gravatar_image_tag post.user.email %></div>
       </div><!-- for user col-md-2 -->
 
       <div class='contents col-md-7'>
@@ -94,7 +95,7 @@
             <% end %>
           </div><!-- pst_btn_group btn-group -->
         <% end %>
-  </div><!-- for post <%= cycle(odd, even) -%> col-md-12 -->
+  </div><!-- for post <%= cycle('odd', 'even') -%> col-md-12 -->
 
 </div><!-- for row -->
 <br>

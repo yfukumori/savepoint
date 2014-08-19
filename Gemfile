@@ -40,6 +40,8 @@ gem 'will_paginate'
 
 gem 'pg'
 
+gem 'gravatar_image_tag'
+
 gem 'quiet_assets', group: :development
 
 # Use ActiveModel has_secure_password
