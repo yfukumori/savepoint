@@ -33,16 +33,8 @@ h1, h2, h3, h4, h5, h6 {
 	width: 220px;
 }
 
-.form-input2 {
-	width: 350px;
-}
-
-.form-input3 {
-	width: 320px;
-}
-
-.form-input4 {
-	width: 230px;
+.form-input2, .form-input3, .form-input4 {
+	width: 80%;
 }
 
 .roll_result {
@@ -71,4 +63,34 @@ width: 100%;
 
 #pls_work {
 margin-left: 0%;	
+}
+
+#new_user {
+	width: 60%;
+	margin: 0 0 0 10%;
+}
+
+.margin_title {
+	margin: 1% 0 0 10%;
+}
+
+.sign_tab, .sign_tab_lab, .sign_tab_in {
+   border: 1px solid rgba(255,255,255,0);
+   background: rgba(255,255,255,0.15);
+}
+
+.sign_tab_lab, .sign_tab_in {
+	padding: 0 0 0.6em 0;
+}
+
+.sign_tab_lab {
+	width: 25%;
+}
+
+.sign_tab {
+	width: 100%;
+}
+
+.form-inputs {
+	margin-bottom: 0.75em;
 }

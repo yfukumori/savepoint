@@ -3,7 +3,7 @@
  -->  
 <!-- Forums changed to Versions, however version titles are not used as only D and D version 1 is supported. Same with the reference to Version One Games.
  -->
- <h2><%= link_to 'Versions', forem.root_path %> &raquo; <%= link_to 'Version One', [forem, forum.category] %> &raquo; <%= link_to 'Version One Games', [forem, forum] %></h2>
+ <h2><%= link_to 'Versions', forem.root_path %> &raquo; <%= link_to 'Version One', [forem, forum.category] %> &raquo; <%= link_to 'Active Games', [forem, forum] %></h2>
   <span id='description'><%= forem_format(forum.description) %></span>
   <div id='forum_topic_links' class='btn-group'>
     <% unless @topic.try(:new_record?) %>
